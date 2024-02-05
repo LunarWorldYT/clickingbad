@@ -33,6 +33,7 @@
          <div id="brainrotvideo" style="display: none;"><!-- Added 'display: none;' to initially hide the video -->
              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dvjy6V4vLlI?si=GultBpMIDri23dsz&amp;controls=0mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
          </div>
+         <div id="upgrades"></div>
 
     <script>
        var count = 0;
@@ -68,6 +69,21 @@ Money++
        brainrotButton.addEventListener('click', function(){ // Changed 'brainrotmode' to 'brainrotButton'
        brainrotvideo.style.display = 'block';
         })
+       }
+
+       class Upgrade {
+        constructor(name, cost, effect) {
+           this.name = name;
+           this.cost = cost;
+           this.effect = effect;
+           this.count = 0;
+
+        }
+        apply() {
+
+        }
+
+        
        }
     </script>
 </body>
