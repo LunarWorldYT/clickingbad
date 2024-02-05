@@ -23,6 +23,7 @@
 <body>
 
     <p id="count">Count: </p>
+    <p id="Money">Money: </p>
         <button id="Make">Make</button> <br><br>
         <button id="Sell">Sell</button>
         <br>
@@ -38,6 +39,7 @@
        var sellButton = document.getElementById('Sell');
        var makeButton = document.getElementById('Make');
        var countDisplay = document.getElementById('count');
+       var moneyDisplay = document.getElementById('Money');
 
 // Event listener for the 'Make' button
        makeButton.addEventListener('click', function() {
@@ -51,6 +53,7 @@
        sellButton.addEventListener('click', function() {
     if (count > 0){ 
 count--
+Money++
         }
         countDisplay.textContent = "Count: " + count;
        })
