@@ -36,6 +36,7 @@
 
     <script>
        var count = 0;
+       var Money = 0;
        var sellButton = document.getElementById('Sell');
        var makeButton = document.getElementById('Make');
        var countDisplay = document.getElementById('count');
@@ -56,6 +57,7 @@ count--
 Money++
         }
         countDisplay.textContent = "Count: " + count;
+        moneyDisplay.textContent = "Money: " + Money;
        })
 
 // Event listener for the 'brainrot' button
