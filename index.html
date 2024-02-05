@@ -82,6 +82,7 @@ Money++
         apply() {
 
         }
+        
 
         render(upgradesDiv) {
             var button = document.createElement('button');
@@ -99,6 +100,18 @@ Money++
        }
 
     }
+
+    function renderUpgrades(){
+  var upgradesDiv = document.getElementById('upgrades');
+  upgradesDiv.innerHTML = '';
+
+  for(let upgrade of [upgrade1, upgrade2]){
+    upgrade.render(upgradesDiv);
+  }
+
+  var upgrade1 = new Upgrade("Upgrade 1", 100, function(){ count += 2; })
+  var upgrade2 = new Upgrade("Upgrade 2", 250, function(){ Money += 2; })
+}
     </script>
 </body>
 </html>
