@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="count">count:</p>
+    <p id="count">Count: </p>
         <button id="Make">Make</button>
         <button id="Sell">Sell</button>
 
@@ -27,8 +27,9 @@
        })
 
        sellButton.addEventListener('click', function() {
+    if (count > 0){ 
 
-        count--
+        count--}
         countDisplay.textContent = "Count: " + count;
        })
     </script>
