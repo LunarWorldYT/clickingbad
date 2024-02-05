@@ -5,16 +5,22 @@
     <title>Document</title>
 </head>
 <body>
-    <p>test</p>
+    <p id="count">count:</p>
         <button id="Make">Make</button>
         <button id="Sell">Sell</button>
 
     <script>
+       var count = 0;
        var makeButton = document.getElementById('Make');
+       var countDisplay = document.getElementById('count');
+
 
        makeButton.addEventListener('click', function() {
+        count++
 
         console.log("make was pressed");
+        console.log("count is now: " + count);
+        countDisplay.textContent = "Count: " + count;
 
        })
     </script>
