@@ -12,6 +12,7 @@
 
     <script>
        var count = 0;
+       var sellButton = document.getElementById('Sell');
        var makeButton = document.getElementById('Make');
        var countDisplay = document.getElementById('count');
 
@@ -23,6 +24,12 @@
         console.log("count is now: " + count);
         countDisplay.textContent = "Count: " + count;
 
+       })
+
+       sellButton.addEventListener('click', function() {
+
+        count--
+        countDisplay.textContent = "Count: " + count;
        })
     </script>
 </body>
