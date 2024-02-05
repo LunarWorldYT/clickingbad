@@ -1,6 +1,7 @@
 
 var count = 0;
 var Money = 0;
+var baseMake = 0;
 var sellButton = document.getElementById('Sell');
 var makeButton = document.getElementById('Make');
 var countDisplay = document.getElementById('count');
@@ -8,10 +9,11 @@ var moneyDisplay = document.getElementById('Money');
 
 // Event listener for the 'Make' button
 makeButton.addEventListener('click', function() {
- count++
+ count += baseMake;
  console.log("make was pressed");
  console.log("count is now: " + count);
  countDisplay.textContent = "Count: " + count;
+ renderUpgrades();
 })
 
 // Event listener for the 'Sell' button
@@ -39,7 +41,7 @@ class Upgrade {
  constructor(name, cost, effect) {
     this.name = name;
     this.cost = cost;
-    this.effect = effect;
+    this.effect = effect || (() => {});
     this.count = 0;
 
  }
@@ -77,6 +79,6 @@ upgrade.render(upgradesDiv);
 
 }
 window.onload
-var upgrade1 = new Upgrade("Upgrade 1", 100, function(){ count += 2; })
+var upgrade1 = new Upgrade("Upgrade 1", 100, function(){ baseMake += 2; })
 var upgrade2 = new Upgrade("Upgrade 2", 250, function(){ Money += 2; })
 renderUpgrades();
