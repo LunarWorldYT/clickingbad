@@ -83,7 +83,17 @@ Money++
 
         }
 
-        
+        render(upgradesDiv) {
+            var button = document.createElement('button');
+    button.innerText = this.name + " (" + this.cost + " Money)";
+    button.disabled = Money < this.cost;
+    button.onclick = () => {
+      if(Money >= this.cost){
+        Money -= this.cost;
+        this.count++;
+        this.apply();
+        updateDisplay(); 
+        }
        }
     </script>
 </body>
